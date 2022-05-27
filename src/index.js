@@ -5,7 +5,12 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { reducerSearchRobots } from './redux/reducer'
-import { Home } from './pages/Home.tsx';
+import { Home } from './pages/Home/Home.tsx';
+import { Shop } from './components/Shop/Shop.tsx'
+import { Profile } from './pages/Profile/Profile.tsx'
+import { Bag } from './pages/Bag/Bag.tsx'
+import { Favourites } from './pages/Favourites/Favourites'
+
 //import thunkMiddleware from 'redux-thunk';
 
 //const store = createStore(reducerSearchRobots, applyMiddleware(thunkMiddleware));
@@ -16,6 +21,11 @@ ReactDOM.render(
       <Router>
         <Routes>
           <Route exact path='/' element={<Home />} />
+          <Route exact path='/src/components/Shop' element={<Shop />} />
+          <Route exact path='/src/pages/Profile/' element={<Profile />} />
+          <Route exact path='/src/pages/Bag/' element={<Bag />} />
+          <Route exact path='/src/pages/Favourites/' element={<Favourites />} />
+
         </Routes>
       </Router>
     </>
