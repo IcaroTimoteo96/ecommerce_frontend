@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 //import { reducerSearchRobots } from './redux/reducer'
-import { Home } from './pages/Home/Home.tsx';
-import { Shop } from './components/Shop/Shop.tsx'
-import { Profile } from './pages/Profile/Profile.tsx'
-import { Bag } from './pages/Bag/Bag.tsx'
-import { Favourites } from './pages/Favourites/Favourites'
+import { Home } from './pages/Home/Home';
+import { Shop } from './pages/Shop/Shop'
+import { Profile } from './pages/Profile/Profile'
+import { Bag } from './pages/Bag/Bag'
+import { Favorites } from './pages/Favorites/Favorites'
 
 //import thunkMiddleware from 'redux-thunk';
 
@@ -17,18 +17,17 @@ import { Favourites } from './pages/Favourites/Favourites'
 
 ReactDOM.render(
   <React.StrictMode>
-    <>
-      <Router>
-        <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route exact path='/src/components/Shop' element={<Shop />} />
-          <Route exact path='/src/pages/Profile/' element={<Profile />} />
-          <Route exact path='/src/pages/Bag/' element={<Bag />} />
-          <Route exact path='/src/pages/Favourites/' element={<Favourites />} />
 
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/src/pages/Shop' element={<Shop />} />
+        <Route exact path='/src/pages/Profile/' element={<Profile />} />
+        <Route exact path='/src/pages/Bag/' element={<Bag />} />
+        <Route exact path='/src/pages/Favorites/' element={<Favorites />} />
+      </Routes>
+    </Router>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
